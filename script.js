@@ -47,7 +47,9 @@ annyang.addCallback('result', function(phrases) {
   console.log("But then again, it could be any of the following: ", phrases);
 });
 // Start listening. You can call this here, or attach this call to an event, button, etc.
-annyang.start();
+function toggle() {
+  annyang.start({ autoRestart: false, continuous: false });
+}
 window.onload = function() {
 
 
