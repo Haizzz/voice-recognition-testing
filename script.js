@@ -42,6 +42,10 @@ if (annyang) {
 // Add our commands to annyang
 annyang.addCommands(commands);
 
+annyang.addCallback('result', function(phrases) {
+  console.log("I think the user said: ", phrases[0]);
+  console.log("But then again, it could be any of the following: ", phrases);
+});
 // Start listening. You can call this here, or attach this call to an event, button, etc.
 annyang.start();
 window.onload = function() {
